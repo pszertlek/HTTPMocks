@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14AB660C0B22E8E33DB42DF6 /* Pods_HTTPMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E12BCC1EDFE0202C339A71A7 /* Pods_HTTPMocks.framework */; };
+		1846321A2141410B00BDE4DD /* HTTPMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185040142074AEFC004B3E88 /* HTTPMocks.framework */; };
 		1850401E2074AEFC004B3E88 /* HTTPMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185040142074AEFC004B3E88 /* HTTPMocks.framework */; };
 		185040232074AEFC004B3E88 /* HTTPMocksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185040222074AEFC004B3E88 /* HTTPMocksTests.swift */; };
 		185040252074AEFC004B3E88 /* HTTPMocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 185040172074AEFC004B3E88 /* HTTPMocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1850402F2074AF0C004B3E88 /* HTTPMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850402E2074AF0C004B3E88 /* HTTPMocks.swift */; };
 		185040312074AF2E004B3E88 /* HTTPMocksProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185040302074AF2E004B3E88 /* HTTPMocksProtocol.swift */; };
+		189A75C721413A6D006F06BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A75C621413A6D006F06BE /* AppDelegate.swift */; };
+		189A75C921413A6D006F06BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A75C821413A6D006F06BE /* ViewController.swift */; };
+		189A75CC21413A6D006F06BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189A75CA21413A6D006F06BE /* Main.storyboard */; };
+		189A75CE21413A6F006F06BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189A75CD21413A6F006F06BE /* Assets.xcassets */; };
+		189A75D121413A6F006F06BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189A75CF21413A6F006F06BE /* LaunchScreen.storyboard */; };
 		18EF617B2074B15D002F7905 /* HTTPMocksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EF617A2074B15D002F7905 /* HTTPMocksResponse.swift */; };
+		390FFA11488D3DBCD0940D00 /* Pods_HTTPMockDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2A4969F85FEB31D73F517B /* Pods_HTTPMockDemo.framework */; };
+		53C214B9000C4D66621652FF /* Pods_HTTPMocksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696809E9BD5685B7DF488D83 /* Pods_HTTPMocksTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +43,23 @@
 		185040242074AEFC004B3E88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1850402E2074AF0C004B3E88 /* HTTPMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMocks.swift; sourceTree = "<group>"; };
 		185040302074AF2E004B3E88 /* HTTPMocksProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMocksProtocol.swift; sourceTree = "<group>"; };
+		189A75C421413A6D006F06BE /* HTTPMockDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPMockDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		189A75C621413A6D006F06BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		189A75C821413A6D006F06BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		189A75CB21413A6D006F06BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		189A75CD21413A6F006F06BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		189A75D021413A6F006F06BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		189A75D221413A6F006F06BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EF617A2074B15D002F7905 /* HTTPMocksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMocksResponse.swift; sourceTree = "<group>"; };
+		33C90D56CFE5151FCB031BF3 /* Pods-HTTPMockDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPMockDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPMockDemo/Pods-HTTPMockDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5B6E9B07BEC496A213B44FD4 /* Pods-HTTPMocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPMocks.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPMocks/Pods-HTTPMocks.release.xcconfig"; sourceTree = "<group>"; };
+		5D2A4969F85FEB31D73F517B /* Pods_HTTPMockDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTTPMockDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E61DC48465514865BD9F97C /* Pods-HTTPMocksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPMocksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPMocksTests/Pods-HTTPMocksTests.debug.xcconfig"; sourceTree = "<group>"; };
+		696809E9BD5685B7DF488D83 /* Pods_HTTPMocksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTTPMocksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6C9FBE677079E60688C446D /* Pods-HTTPMocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPMocks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPMocks/Pods-HTTPMocks.debug.xcconfig"; sourceTree = "<group>"; };
+		E12BCC1EDFE0202C339A71A7 /* Pods_HTTPMocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTTPMocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7D86D93496DFB9156346A26 /* Pods-HTTPMockDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPMockDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPMockDemo/Pods-HTTPMockDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FD528D31D23436174A9651EB /* Pods-HTTPMocksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTPMocksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTPMocksTests/Pods-HTTPMocksTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14AB660C0B22E8E33DB42DF6 /* Pods_HTTPMocks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +76,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1850401E2074AEFC004B3E88 /* HTTPMocks.framework in Frameworks */,
+				53C214B9000C4D66621652FF /* Pods_HTTPMocksTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189A75C121413A6D006F06BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1846321A2141410B00BDE4DD /* HTTPMocks.framework in Frameworks */,
+				390FFA11488D3DBCD0940D00 /* Pods_HTTPMockDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +97,10 @@
 			children = (
 				185040162074AEFC004B3E88 /* HTTPMocks */,
 				185040212074AEFC004B3E88 /* HTTPMocksTests */,
+				189A75C521413A6D006F06BE /* HTTPMockDemo */,
 				185040152074AEFC004B3E88 /* Products */,
+				D67B01EB66572289B81188B8 /* Pods */,
+				1B6392810CA720367D4446DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +109,7 @@
 			children = (
 				185040142074AEFC004B3E88 /* HTTPMocks.framework */,
 				1850401D2074AEFC004B3E88 /* HTTPMocksTests.xctest */,
+				189A75C421413A6D006F06BE /* HTTPMockDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +135,42 @@
 			path = HTTPMocksTests;
 			sourceTree = "<group>";
 		};
+		189A75C521413A6D006F06BE /* HTTPMockDemo */ = {
+			isa = PBXGroup;
+			children = (
+				189A75C621413A6D006F06BE /* AppDelegate.swift */,
+				189A75C821413A6D006F06BE /* ViewController.swift */,
+				189A75CA21413A6D006F06BE /* Main.storyboard */,
+				189A75CD21413A6F006F06BE /* Assets.xcassets */,
+				189A75CF21413A6F006F06BE /* LaunchScreen.storyboard */,
+				189A75D221413A6F006F06BE /* Info.plist */,
+			);
+			path = HTTPMockDemo;
+			sourceTree = "<group>";
+		};
+		1B6392810CA720367D4446DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D2A4969F85FEB31D73F517B /* Pods_HTTPMockDemo.framework */,
+				E12BCC1EDFE0202C339A71A7 /* Pods_HTTPMocks.framework */,
+				696809E9BD5685B7DF488D83 /* Pods_HTTPMocksTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D67B01EB66572289B81188B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33C90D56CFE5151FCB031BF3 /* Pods-HTTPMockDemo.debug.xcconfig */,
+				E7D86D93496DFB9156346A26 /* Pods-HTTPMockDemo.release.xcconfig */,
+				C6C9FBE677079E60688C446D /* Pods-HTTPMocks.debug.xcconfig */,
+				5B6E9B07BEC496A213B44FD4 /* Pods-HTTPMocks.release.xcconfig */,
+				5E61DC48465514865BD9F97C /* Pods-HTTPMocksTests.debug.xcconfig */,
+				FD528D31D23436174A9651EB /* Pods-HTTPMocksTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -113,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 185040282074AEFC004B3E88 /* Build configuration list for PBXNativeTarget "HTTPMocks" */;
 			buildPhases = (
+				FEC42457ECA2632CCF85ED88 /* [CP] Check Pods Manifest.lock */,
 				1850400F2074AEFC004B3E88 /* Sources */,
 				185040102074AEFC004B3E88 /* Frameworks */,
 				185040112074AEFC004B3E88 /* Headers */,
@@ -131,6 +208,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1850402B2074AEFC004B3E88 /* Build configuration list for PBXNativeTarget "HTTPMocksTests" */;
 			buildPhases = (
+				54321BAECB39E5DF2E454D06 /* [CP] Check Pods Manifest.lock */,
 				185040192074AEFC004B3E88 /* Sources */,
 				1850401A2074AEFC004B3E88 /* Frameworks */,
 				1850401B2074AEFC004B3E88 /* Resources */,
@@ -145,13 +223,32 @@
 			productReference = 1850401D2074AEFC004B3E88 /* HTTPMocksTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		189A75C321413A6D006F06BE /* HTTPMockDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189A75D521413A6F006F06BE /* Build configuration list for PBXNativeTarget "HTTPMockDemo" */;
+			buildPhases = (
+				2575873F43975C45476262CA /* [CP] Check Pods Manifest.lock */,
+				189A75C021413A6D006F06BE /* Sources */,
+				189A75C121413A6D006F06BE /* Frameworks */,
+				189A75C221413A6D006F06BE /* Resources */,
+				DE6F39F46087A18DEF4D5EFB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTTPMockDemo;
+			productName = HTTPMockDemo;
+			productReference = 189A75C421413A6D006F06BE /* HTTPMockDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		1850400B2074AEFC004B3E88 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Pszertlek;
 				TargetAttributes = {
@@ -162,6 +259,9 @@
 					1850401C2074AEFC004B3E88 = {
 						CreatedOnToolsVersion = 9.3;
 					};
+					189A75C321413A6D006F06BE = {
+						CreatedOnToolsVersion = 9.4;
+					};
 				};
 			};
 			buildConfigurationList = 1850400E2074AEFC004B3E88 /* Build configuration list for PBXProject "HTTPMocks" */;
@@ -170,6 +270,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 1850400A2074AEFC004B3E88;
 			productRefGroup = 185040152074AEFC004B3E88 /* Products */;
@@ -178,6 +279,7 @@
 			targets = (
 				185040132074AEFC004B3E88 /* HTTPMocks */,
 				1850401C2074AEFC004B3E88 /* HTTPMocksTests */,
+				189A75C321413A6D006F06BE /* HTTPMockDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -197,7 +299,92 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		189A75C221413A6D006F06BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189A75D121413A6F006F06BE /* LaunchScreen.storyboard in Resources */,
+				189A75CE21413A6F006F06BE /* Assets.xcassets in Resources */,
+				189A75CC21413A6D006F06BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2575873F43975C45476262CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HTTPMockDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54321BAECB39E5DF2E454D06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HTTPMocksTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE6F39F46087A18DEF4D5EFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HTTPMockDemo/Pods-HTTPMockDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HTTPMockDemo/Pods-HTTPMockDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEC42457ECA2632CCF85ED88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HTTPMocks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1850400F2074AEFC004B3E88 /* Sources */ = {
@@ -218,6 +405,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		189A75C021413A6D006F06BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189A75C921413A6D006F06BE /* ViewController.swift in Sources */,
+				189A75C721413A6D006F06BE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -227,6 +423,25 @@
 			targetProxy = 1850401F2074AEFC004B3E88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		189A75CA21413A6D006F06BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				189A75CB21413A6D006F06BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		189A75CF21413A6F006F06BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				189A75D021413A6F006F06BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		185040262074AEFC004B3E88 /* Debug */ = {
@@ -351,6 +566,7 @@
 		};
 		185040292074AEFC004B3E88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6C9FBE677079E60688C446D /* Pods-HTTPMocks.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -378,6 +594,7 @@
 		};
 		1850402A2074AEFC004B3E88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B6E9B07BEC496A213B44FD4 /* Pods-HTTPMocks.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -404,6 +621,7 @@
 		};
 		1850402C2074AEFC004B3E88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E61DC48465514865BD9F97C /* Pods-HTTPMocksTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -423,6 +641,7 @@
 		};
 		1850402D2074AEFC004B3E88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD528D31D23436174A9651EB /* Pods-HTTPMocksTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -437,6 +656,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		189A75D321413A6F006F06BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C90D56CFE5151FCB031BF3 /* Pods-HTTPMockDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY3APXQW82;
+				INFOPLIST_FILE = HTTPMockDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pszertlek.HTTPMockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		189A75D421413A6F006F06BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7D86D93496DFB9156346A26 /* Pods-HTTPMockDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HY3APXQW82;
+				INFOPLIST_FILE = HTTPMockDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Pszertlek.HTTPMockDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -466,6 +725,15 @@
 			buildConfigurations = (
 				1850402C2074AEFC004B3E88 /* Debug */,
 				1850402D2074AEFC004B3E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		189A75D521413A6F006F06BE /* Build configuration list for PBXNativeTarget "HTTPMockDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189A75D321413A6F006F06BE /* Debug */,
+				189A75D421413A6F006F06BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
