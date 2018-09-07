@@ -19,7 +19,17 @@ class ViewController: UIViewController {
         button.frame = CGRect(x: 100, y: 100, width: 100, height: 30)
         button.setTitle("request", for: .normal)
         view.addSubview(button)
+        button.setTitleColor(UIColor.red, for: .normal)
         button.addTarget(self, action: #selector(buttonClick(button:)), for: .touchUpInside)
+        
+        HTTPMocks.mockRequests(testBlock: { (request) -> Bool in
+            return true
+        }) { (request) -> HTTPMocksResponse in
+            let dict: [String : Any] = ["status":1,"msg":"hello"]
+            let responseData = try! JSONSerialization.data(withJSONObject: dict, options: JSONSerialization.WritingOptions(rawValue: 0))
+            let input = InputStream(data: responseData)
+            return HTTPMocksResponse(inputStream: input, dataSize: Int64(responseData.count), statusCode: 200, headers: ["hello":"sss" as AnyObject])
+        }
     }
 
     @objc func buttonClick(button:UIButton) {

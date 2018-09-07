@@ -8,17 +8,17 @@
 
 import Foundation
 
-typealias HTTPMocksTestBlock = (URLRequest) -> Bool
-typealias HTTPMocksResponseBlock = (URLRequest) -> HTTPMocksResponse
+public typealias HTTPMocksTestBlock = (URLRequest) -> Bool
+public typealias HTTPMocksResponseBlock = (URLRequest) -> HTTPMocksResponse
 
-class HTTPMocksDescriptor: CustomStringConvertible {
-    var description: String {
+public class HTTPMocksDescriptor: CustomStringConvertible {
+    public var description: String {
         return "name:\(name ?? "nil")"
     }
     
     var name: String?
-    fileprivate var testBlock: HTTPMocksTestBlock
-    fileprivate var responseBlock: HTTPMocksResponseBlock
+    var testBlock: HTTPMocksTestBlock
+    var responseBlock: HTTPMocksResponseBlock
     init(name: String? = nil, testBlock: @escaping HTTPMocksTestBlock, responseBlock: @escaping HTTPMocksResponseBlock) {
         self.testBlock = testBlock
         self.name = name
@@ -26,7 +26,7 @@ class HTTPMocksDescriptor: CustomStringConvertible {
     }
 }
 
-class HTTPMocks {
+open class HTTPMocks {
     static let shared = HTTPMocks()
     lazy var lock: NSLock = NSLock()
 
@@ -46,19 +46,21 @@ class HTTPMocks {
         }
     }
     private init() {
-        
+        self.enable = true
     }
-    static func mockRequests(testBlock: @escaping HTTPMocksTestBlock,responseBlock: @escaping HTTPMocksResponseBlock) -> HTTPMocksDescriptor {
+    
+    @discardableResult
+    public static func mockRequests(testBlock: @escaping HTTPMocksTestBlock,responseBlock: @escaping HTTPMocksResponseBlock) -> HTTPMocksDescriptor {
         return HTTPMocksDescriptor(testBlock: testBlock, responseBlock: responseBlock)
     }
-    static func remove(stub: HTTPMocksDescriptor) {
+    public static func remove(stub: HTTPMocksDescriptor) {
         
     }
 }
 
 //MARK: Private
 
-extension HTTPMocks {
+public extension HTTPMocks {
     func addMock(_ mock:HTTPMocksDescriptor) {
         lock.lock()
         mockDescriptors.append(mock)
@@ -96,14 +98,14 @@ extension HTTPMocks {
 
 //MARK:Disable & Enable
 
-extension HTTPMocks {
-//    static func setEnable(_ enable: Bool) {
-//        HTTPMocks.shared.enable = enable
-//    }
-//
-//    static func isEnable() -> Bool {
-//        return HTTPMocks.shared.enable
-//    }
+public extension HTTPMocks {
+    public static func setEnable(_ enable: Bool) {
+        HTTPMocks.shared.enable = enable
+    }
+
+    public static func isEnable() -> Bool {
+        return HTTPMocks.shared.enable
+    }
     public static func sessionConfigure(_ sessionConfigure: URLSessionConfiguration, enabled: Bool) {
         var urlProtocols = sessionConfigure.protocolClasses!
         let proto = HTTPMocksProtocol.self
