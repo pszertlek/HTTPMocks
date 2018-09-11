@@ -34,7 +34,7 @@ open class HTTPMocks {
     
     var onMockActivationBlock: ((URLRequest, HTTPMocksDescriptor,HTTPMocksResponse) -> Void)?
     var onMockRedirectBlock: ((URLRequest, URLRequest, HTTPMocksDescriptor) -> Void)?
-    var afterMockFinishBlock: ((URLRequest, HTTPMocksDescriptor, HTTPMocksResponse?,Error) -> Void)?
+    var afterMockFinishBlock: ((URLRequest, HTTPMocksDescriptor?, HTTPMocksResponse?,Error?) -> Void)?
     var onMockMissingBlock: ((URLRequest) -> Void)?
     var enable: Bool = true {
         didSet {
@@ -51,17 +51,20 @@ open class HTTPMocks {
     
     @discardableResult
     public static func mockRequests(testBlock: @escaping HTTPMocksTestBlock,responseBlock: @escaping HTTPMocksResponseBlock) -> HTTPMocksDescriptor {
-        return HTTPMocksDescriptor(testBlock: testBlock, responseBlock: responseBlock)
+        let mock =  HTTPMocksDescriptor(testBlock: testBlock, responseBlock: responseBlock)
+        self.shared.addMock(mock)
+        return mock
     }
-    public static func remove(stub: HTTPMocksDescriptor) {
-        
+    
+    public static func remove(mock: HTTPMocksDescriptor) {
+        self.shared.removeMock(mock)
     }
 }
 
 //MARK: Private
 
 public extension HTTPMocks {
-    func addMock(_ mock:HTTPMocksDescriptor) {
+    func addMock(_ mock: HTTPMocksDescriptor) {
         lock.lock()
         mockDescriptors.append(mock)
         lock.unlock()

@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         button.setTitleColor(UIColor.red, for: .normal)
         button.addTarget(self, action: #selector(buttonClick(button:)), for: .touchUpInside)
         
+        HTTPMocks.setEnable(true)
+//        HTTPMocks.sessionConfigure(Alamofire.SessionManager.default.session.configuration, enabled: true)
         HTTPMocks.mockRequests(testBlock: { (request) -> Bool in
             return true
         }) { (request) -> HTTPMocksResponse in
@@ -33,16 +35,29 @@ class ViewController: UIViewController {
     }
 
     @objc func buttonClick(button:UIButton) {
-        Alamofire.request("https://httpbin.org/get").responseJSON { response in
-            print(response.request)  // 原始的URL请求
-            print(response.response) // HTTP URL响应
-            print(response.data)     // 服务器返回的数据
-            print(response.result)   // 响应序列化结果，在这个闭包里，存储的是JSON数据
-            
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-            }
-        }
+        
+        URLSession.shared.downloadTask(with: URL(string: "https://httpbin.org/get")!) { (url, response, error) in
+            print(response)
+//            print(response.request)  // 原始的URL请求
+//            print(response.response) // HTTP URL响应
+//            print(response.data)     // 服务器返回的数据
+//            print(response.result)   // 响应序列化结果，在这个闭包里，存储的是JSON数据
+//
+//            if let JSON = response.result.value {
+//                print("JSON: \(JSON)")
+//            }
+        }.resume()
+        
+//        Alamofire.request("https://httpbin.org/get").responseJSON { response in
+//            print(response.request)  // 原始的URL请求
+//            print(response.response) // HTTP URL响应
+//            print(response.data)     // 服务器返回的数据
+//            print(response.result)   // 响应序列化结果，在这个闭包里，存储的是JSON数据
+//
+//            if let JSON = response.result.value {
+//                print("JSON: \(JSON)")
+//            }
+//        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

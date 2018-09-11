@@ -34,6 +34,11 @@ class HTTPMocksProtocol: URLProtocol {
         return found
     }
     
+//    override class func canInit(with task:URLSessionTask) -> Bool {
+//        return true;
+//    }
+
+    
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
     }
@@ -56,8 +61,31 @@ class HTTPMocksProtocol: URLProtocol {
                 HTTPCookieStorage.shared.setCookies(cookies, for: request.url, mainDocumentURL: request.mainDocumentURL)
             }
             let redirectLocation = responseMock.headers!["Location"]
-            let redirectLocationURL = URL(string: redirectLocation as! String)
+            let redirectLocationURL = redirectLocation == nil ? nil : URL(string: redirectLocation as! String)
+            self.executeOnClinetRunLoopAfter(delay: responseMock.requestTime) {
+                if !self.stopped {
+                    if (responseMock.statusCode > 300) && (responseMock.statusCode < 400) && redirectLocationURL != nil {
+
+                    }
+                }
+                self.client?.urlProtocol(self, didReceive: urlResponse!, cacheStoragePolicy: URLCache.StoragePolicy.notAllowed)
+                if responseMock.inputStream?.streamStatus == .notOpen {
+                    responseMock.inputStream?.open()
+                }
+                self.streamData(for: self.client!, mockResponse: responseMock, completion: { (error) in
+                    responseMock.inputStream?.close()
+                    if error == nil {
+                        self.client?.urlProtocolDidFinishLoading(self)
+                    } else {
+                        self.client?.urlProtocol(self, didFailWithError: error!)
+                    }
+                    if HTTPMocks.shared.afterMockFinishBlock != nil {
+                        HTTPMocks.shared.afterMockFinishBlock?(request, self.mockDescriptor, responseMock, error)
+                    }
+                })
+            }
         }
+
     }
     
     override func stopLoading() {
@@ -89,6 +117,7 @@ class HTTPMocksProtocol: URLProtocol {
             
         }
     }
+    
     
     func streamData(for client: URLProtocolClient, stream: InputStream, timingInfo: HTTPMocksStreamTimingInfo, completion: @escaping (Error?) -> Void) {
         assert(timingInfo.chunkSizePerSlot > 0)
